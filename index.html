@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+      integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Montserrat|Open+Sans|Roboto&display=swap");
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div id="menu">
+          <ul>
+            <li class="nav-item" id="settings">
+              <i class="fas fa-wrench"></i>SETTINGS
+            </li>
+            <li class="nav-item" id="gists">
+              <i class="fas fa-code"></i>GISTS
+            </li>
+            <li class="nav-item" id="stack">
+              <i class="fab fa-stack-overflow"></i>STACK OVERFLOW
+            </li>
+            <li class="nav-item" id="trending">
+              <i class="fas fa-chart-line"></i>TRENDING
+            </li>
+            <li class="nav-item" id="scratch">
+              <i class="fas fa-pen-square"></i>SCRATCH PAD
+            </li>
+            <li class="nav-item" id="play">
+              <i class="far fa-lightbulb" id="bulb" ></i>PLAYGROUND<i
+                class="fas fa-lock" id="lock"
+              ></i>
+            </li>
+            <li class="nav-item" id="help">
+              <i class="fas fa-question"></i>HELP/INTRO
+            </li>
+          </ul>
+        </div>
+        <div id="logos">
+          <li class="nav-item" id="logo">
+            <img src="https://initab.com/assets/images/initab_logo.png" />
+          </li>
+          <li class="nav-item" id="social">
+              <i class="fab fa-facebook-square" style="color: #3C5A99"></i>
+              <i class="fab fa-linkedin" style="color: #0077B5"></i>
+              <i class="fab fa-twitter-square" style="color: #00aced"></i>
+              <i class="fab fa-reddit" style="color: #FF5700"></i>
+            
+          </li>
+        </div>
+      </div>
+      <div class="popular">
+        <div class="header"><h5></i>
+          <i class="fab fa-reddit" ></i> popular on r/javascript</h5></div>
+          <div class="popular-item"><p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt ut ipsam placeat id eos maxime quo ad, nisi quasi asperiores sequi.</p></div>
+          
+          <div class="popular-item"><p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit quasi voluptate ab aliquam culpa harum illo repellendus voluptatem deserunt tempora!</p>
+          </div>
+          <div class="popular-item"><p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum dolor esse eligendi quis omnis ducimus est inventore dolore maxime itaque, alias animi nobis tempore impedit vitae illum. Voluptatibus illo possimus libero distinctio neque voluptate corporis?</p>
+          </div>
+
+          <div class="popular-item"><p>
+              </p>
+            </div>
+
+      </div>
+      <div class="content">
+        
+          <div class="header" id="relavent"> <h5><i class="far fa-clock"></i>relavent javascript history</h5></div>
+
+          <div class="rel-main">
+            <div class="rel-item"><span><i class="fab fa-react"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span><span class="days">2 days ago</span></div>
+            <div class="rel-item"><span><i class="fab fa-angular"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span><span class="days">3 days ago</span></div>
+            <div class="rel-item"><span><i class="fab fa-vuejs"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span><span class="days">4 days ago</span></div>
+            <div class="rel-item"><span><i class="fab fa-js-square"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span><span class="days">5 days ago</span></div>
+            <div class="rel-item"><span><i class="fab fa-twitter-square"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span><span class="days">6 days ago</span></div>
+            <div class="rel-item"><span><i class="fab fa-flipboard"></i>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span><span class="days">7 days ago</span></div>
+          </div>
+
+          <hr>
+        
+
+          <div id="bottom-content">
+            <div><span  id="clock"></span> <span  id="am-pm"></span></div>
+            <div id="date"></div>
+            <div class="bottom-text">
+              <p><i class="fas fa-question-circle" style="color: #ffb659"></i>Did you know can add CUSTOM LINKS to display in this section?</p>
+              <p>Open the SETTINGS panel and add URLs of your favourite sites to the CUSTOM LINKS’ texture</p>
+              <p style="color:#ffb659"><i class="fas fa-times-circle "></i>Got it! Don’t show me this again.</p>
+            </div>
+          </div>
+      </div>  
+      <div class="popular" id="issues">
+          <div class="header"> <h5><i class="fab fa-github"></i>github issues history</h5></div>
+          <div class="popular-item"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. </p></div>
+          <div class="popular-item"><p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Porro eaque sequi voluptate! Corrupti distinctio cupiditate necessitatibus soluta quibusdam numquam nam!</p></div>
+          <div class="popular-item"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque iste modi ducimus veritatis nobis molestias nam labore odio!</p></div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+
+  <script>
+    const mytime = setInterval(myDisp, 1000);
+
+    function myDisp() {
+      document.getElementById("clock").innerHTML = moment().format("h:mm");
+      document.getElementById("am-pm").innerHTML = moment().format("a");
+      document.getElementById("date").innerHTML = moment().format("LL");
+    }
+  </script>
+</html>
